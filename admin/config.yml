@@ -1,0 +1,15 @@
+backend:
+  name: github
+  repo: ctrumple/blog-netlify-test
+  branch: master
+publish_mode: editorial_workflow
+media_folder: "assets"
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "html"}
